@@ -1,0 +1,155 @@
+/////////////////////////
+// LAYOUT
+/////////////////////////
+
+.section-wrapper{
+	@include to-ems(margin, 0);
+	@include to-ems(padding, 40px 20px);
+	// 
+
+	@media(max-width: 600px){
+		width: 100%;
+		@include to-ems(padding, 20px);
+	}
+
+	.section-inner{
+		
+		.section-content{
+			width: 100%;
+			max-width: $page-max-width;
+			@include to-ems(margin, 0 auto);
+			@include to-ems(padding, 20px 0);
+
+			.section-title{
+				@include to-ems(margin-bottom, 20px);
+				text-transform: uppercase;
+			}
+
+			p{
+				@include to-ems(font-size, 19px);
+			}
+
+		}
+	}
+}
+
+
+.half-page-wrapper{
+	@include to-ems(padding, 40px 0);
+	
+	.half-page-content{
+		display: flex;
+		flex-wrap: wrap;
+
+		.half-content-image{
+			width: 50%;
+			background-size: cover;
+			background-position: center bottom;
+			background-image: url(#{$url}/income-protection.jpg);
+
+			order: 1;
+		
+			@media(max-width: $max-width-mobile){
+				width: 100%;;
+				order: 2;
+			}
+
+		}
+		.half-content-text{
+			background: $dark-blue;
+			color: $white;
+			width: 50%;
+			@include to-ems(padding, 40px 0px);
+			order: 2;
+
+			@media(max-width: $max-width-mobile){
+				width: 100%;
+				order: 1;
+			}
+
+			.content-inner{
+				@include to-ems(max-width, 550px);
+				@include to-ems(padding, 0px 40px);
+
+				.section-title{
+					@include to-ems(margin-bottom, 20px);
+					text-transform: uppercase;
+				}
+			}
+
+		}
+	}
+}
+
+
+.service-wrapper{
+	width: 33%;
+	@include to-ems(padding, 10px);
+	@include to-ems(margin-bottom, 20px);
+	text-align: center;
+
+	@media(min-width: $min-width-tablet) and (max-width: $min-width-desktop){
+		width: 50%;
+		padding: 0 10px;
+		align-items: center;
+	}
+
+	@media(max-width: $min-width-tablet){
+		width: 100%;
+		text-align: left;
+		align-items: center;
+		padding: 0;
+	}
+
+	.service-block{
+		color: $grey;
+		text-decoration: none;
+
+		.service-header{
+			@media(max-width: $min-width-tablet){
+				display: flex;
+				align-items: center;
+				width: 100%;
+				@include to-ems(margin-bottom, 5px);
+			}
+		}
+
+		&:hover{
+			.service-icon{
+				transform: scale(1.4);	
+			}
+		}
+
+		.service-icon{
+			margin: 0 auto;
+			@include to-ems(margin-bottom, 10px);
+			transform: scale(1);
+			transition: all 500ms;
+			color: $orange;
+
+			
+			@media(max-width: $min-width-tablet){
+				@include to-ems(margin-bottom, 0px);
+			}
+
+			span{
+				@include to-ems(font-size, 30px);
+			}
+		}
+
+		.service-title{
+			font-size: 1.4em;
+			@include to-ems(margin-bottom, 20px);
+
+			@media(max-width: $min-width-tablet){
+				width: 100%;
+				@include to-ems(padding-left, 10px);
+				margin-bottom: 0;
+			}
+		}
+
+		.service-content{
+			@include to-ems(margin-bottom, 10px);
+		}
+	}
+}

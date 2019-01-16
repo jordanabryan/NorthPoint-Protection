@@ -1,0 +1,129 @@
+/////////////////////////
+// DISPLAY
+/////////////////////////
+
+.bg-image{
+	background-size: cover;
+	min-height: 300px;
+}
+
+.bg-lightgrey{
+	background: $lightest-grey;
+}
+
+.bg-white{
+	background: $white;
+}
+
+.tc-facebook{
+	color: $facebook-blue;
+}
+
+.tc-twitter{
+	color: $twitter-blue;
+}
+
+.tc-linkedin{
+	color: $linkedin-blue;
+}
+
+.tc-orange{
+	color: $orange;
+}
+
+.bg-contact{
+	background-image: url(#{$url}/contact.jpg);
+}
+
+.bg-about{
+	background-image: url(#{$url}/business-2.jpg);
+	background-position: center;
+}
+
+.bg-protection{
+	background-image: url(#{$url}/helmet.jpg);
+	background-position: center;
+}
+
+.bg-calculator{
+	background-image: url(#{$url}/background.jpg);
+	background-position: center;
+}
+
+.bg-income-protection{
+	background-image: url(#{$url}/income-protection.jpg);
+	background-position: center;
+}
+
+.side-image{
+	min-height: 400px;
+	background-position: center;
+	background-size: cover;
+}
+
+.service-header{
+	background-position: center;
+}
+
+.larger-font{
+	font-size: 1.2em;
+    letter-spacing: 0.02em;
+    margin-bottom: 5px;
+}
+
+.provided-image{
+	min-height: 400px;
+	background-size: cover;
+}
+
+
+
+
+@media(max-width: $min-width-tablet-desktop){
+	.hide-desktop{
+		display: none;
+	}
+	.show-desktop-inline{
+		display: inline-block;
+	}
+	.show-desktop-grid{
+		display: grid;
+	}
+	.show-desktop{
+		display: block;
+	}
+}
+
+@media(min-width: $min-width-tablet) and (max-width: $min-width-tablet-desktop){
+	.hide-tablet{
+		display: none;
+	}	
+	.show-tablet-inline{
+		display: inline-block;
+	}
+	.show-tablet-grid{
+		display: grid;
+	}
+	.show-tablet{
+		display: block;
+	}	
+}
+
+@media(max-width: $min-width-tablet){
+	.hide-mobile{
+		display: none;
+	}	
+	.show-mobile-inline{
+		display: inline-block;
+	}	
+	.show-mobile-grid{
+		display: grid;
+	}	
+	.show-mobile{
+		display: block;
+	}	
+}
+
+
+
+

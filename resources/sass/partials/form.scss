@@ -1,0 +1,116 @@
+/////////////////////////
+// FORM
+/////////////////////////
+
+form{
+	width: 100%;
+
+	.form-inner{
+		padding: 10px;
+	}
+}
+
+fieldset{
+	padding: 20px;
+	border: solid $grey 1px;
+	margin-bottom: 20px;
+}
+
+legend{
+	padding: 0 10px;
+}
+
+
+.field-wrapper{
+	margin: 10px 0 20px;
+
+	label{
+		display: block;
+		margin-bottom: 5px;
+		border: none;
+
+		&.label-error{
+			color: $dark-red;
+		}
+
+	}
+	.field-input{
+		.input{
+			width: 100%;
+			padding: 10px;
+			border: solid 1px #ddd;
+
+			&.input-error{
+				border: solid 1px $dark-red;
+			}
+
+		}
+
+		.input-checkbox{
+			width: 33%;
+			padding: 10px;
+			display: flex;
+			align-items: center;
+
+			@media(max-width: $max-width-mobile){
+				width: 100%;
+			}
+
+			input{
+				margin-bottom: 0px !important;
+
+				&.input-error{
+					border: solid 1px $dark-red;
+				}
+
+			}
+			label{
+				padding-left: 10px;
+
+				&.label-error{
+					color: $dark-red;
+				}
+
+			}
+		}
+
+		.input-error-warning{
+			color: $dark-red;
+			margin-top: 5px;
+		}
+
+		p{
+			margin-bottom: 10px;
+		}
+
+	}
+
+	.submit{
+		width: 100%;
+		background: $dark-green;
+		padding: 10px;
+		border: none;
+		color: $white;
+		text-transform: uppercase;
+		font-size: 1em;
+	}
+}
+
+
+.message{
+	margin: 0 0 20px 0;
+	padding: 10px;
+	border: solid 1px;
+}
+
+.success-message{
+	color: #4caf50;
+	background: #b4e8b6;
+	border-color: #4caf50;
+
+}
+.error-message{
+	color: #c72222;
+	background: #ec9c9c;
+	border-color: #c72222;
+}

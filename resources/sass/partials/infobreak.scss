@@ -1,0 +1,26 @@
+/////////////////////////
+// INFO BREAK
+/////////////////////////
+
+.info-break-wrapper{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding: 20px 0;
+	background: $dark-blue;
+	color: $light-grey;
+
+	@media(max-width: 600px){
+		padding: 0;
+	}
+
+	.info-break-inner{
+		width: 100%;
+		max-width: $page-max-width;
+		margin: 0 auto;
+		padding: 20px 0;
+		font-size: 1.4em;
+		display: flex;
+		align-items: center;
+	}
+}

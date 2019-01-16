@@ -1,0 +1,52 @@
+/////////////////////////
+// VARIABLES
+/////////////////////////
+
+$base-font-size: 15; //px
+$spacing: 10 / $base-font-size * 1em;
+$max-width: $spacing * 106;
+
+$base-font-size: 15px;
+$em-ratio: ($base-font-size / 1px) / 1em; //Needed to set em as unit
+
+
+// Breakpoint sizes
+
+$max-width-mobilesmall: 440px;
+$max-width-mobile: 624px;
+$min-width-tablet: 625px;
+$min-width-tablet-desktop: 855px;
+$min-width-desktop: 880px;
+
+$page-max-width: 1100px;
+
+// Colors 
+
+$black: #333;
+$grey: #777;
+$light-grey: #ddd;
+$lightest-grey: #eee;
+$white: #fff;
+$off-white: #fcfcfc;
+$orange: orange;
+$dark-blue: #40484f;
+
+
+// Social colours
+
+$twitter-blue: #09b0ed;
+$facebook-blue: #3d5a98;
+$linkedin-blue: #035a87;
+
+
+// Interaction colours
+
+$dialog-blue : #9cbee7;
+$light-red : #ff2838;
+$dark-red : #C50000;
+$dark-green : #008000;
+$alert-yellow : #FFFFAD;
+
+
+//
+$url: 'http://northpoint-protection.lime-house-studio.co.uk/images/';

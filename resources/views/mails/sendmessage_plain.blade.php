@@ -1,0 +1,1 @@
+Hello {{ $content->receiver }} \n\r {{ $content->message }}

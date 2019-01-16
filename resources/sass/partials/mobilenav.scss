@@ -1,0 +1,85 @@
+/////////////////////////
+// MOBILE NAV
+/////////////////////////
+
+.mobile-nav{
+    pointer-events: none;
+	opacity: 0;
+    transition: all 500ms;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    overflow: hidden;
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+	.open &{
+		opacity: 1;
+		pointer-events: initial;
+	}
+
+	.mobile-nav-inner{
+		width: 90%;
+		transform: scale(1.1);
+    	@include transition(all, 500ms);
+
+		.open &{
+			transform: scale(1);
+		}
+
+		.mobile-nav-links{
+			@include to-ems(margin-bottom, 20px);
+
+			ul{
+				li{
+					display: block;
+					text-align: center;
+
+					a{
+						color: $white;
+						text-decoration: none;
+						@include to-ems(padding, 10px);
+						transition: all 500ms;
+						display: block;
+						font-size: 1.4em;
+
+						&:hover{
+							color: $orange;
+						}
+					}
+				}
+			}
+		}
+
+		.mobile-social-nav{
+
+			ul{
+				text-align: center;
+
+				li{
+					display: inline-block;
+					text-align: center;
+
+					a{
+						color: $white;
+						text-decoration: none;
+						@include to-ems(padding, 10px);
+						display: block;
+						font-size: 1.4em;
+						transition: all 500ms;
+
+						&:hover{
+							color: $orange;
+						}
+
+					}
+				}
+			}
+		}
+	}
+}

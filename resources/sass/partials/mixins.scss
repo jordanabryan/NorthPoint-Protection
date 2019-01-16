@@ -1,0 +1,40 @@
+/////////////////////////
+// MIXINS
+/////////////////////////
+
+@mixin transition($property, $time){
+	-webkit-transition: $property $time;
+	transition: $property $time;
+}
+
+
+@mixin to-ems($property, $values) {
+	$px: ();
+	$em: ();
+
+	@each $value in $values {
+
+		@if $value == '!important' {
+			$px: append($px,  !important);
+			$em: append($em,  !important);
+		} @else {
+
+			$px: append($px, $value);
+
+			@if $value == auto or str-index(inspect($value), "%") != null {
+				$em: append($em, $value);
+			}
+
+			@else {
+				@if str-index(inspect($value), "px") != null {
+					$value: $value / 1px; //Removes pixel value for calculating ems
+				}
+				$em: append($em, ($value / $em-ratio));
+			}
+
+		}
+	}
+
+	#{$property}: $px;
+	#{$property}: $em;
+}
